@@ -1,0 +1,125 @@
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+    margin-top: 0;
+}
+
+.container {
+    /* <!-- container lagadia taaki width 80% rhe parent ki and mobile par bhi responsive  */
+    /* and max-width 1100px taaki isse badhi width na ho --> */
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  /* display: flex => flex container */
+  display: flex;
+  /* and justify content space between lagadia taaki bachi hui space k wajah se gap ajaye */
+/* agar width 100% hojati dono ki toh justify content space betweeen kaam nahi karta */
+  justify-content: space-between;
+
+  /* can't use yet */
+  /* gap: 100px; */
+}
+
+.col {
+  /* these are now flex items */
+  width: 100%;
+}
+
+.col + .col {
+  margin-left: 30px;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__text {
+  width: 62%;
+}
+
+.hero__img {
+  width: 32%;
+  align-self: flex-start;
+}
+
+.hero p {
+  margin-bottom: 3em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+/*  iss flex item ko humne 62% set kra and neeche waale side bar ko 32%
+agar hum sidebar mai width set nahi krte toh woh apne aap 100% lena shuru krdeti
+content k hisaab se isiluye dono mai dena zaroori h*/
+
+/* and justify content space between lagadia taaki bachi hui space k wajah se gap ajaye */
+/* agar width 100% hojati dono ki toh justify content space betweeen kaam nahi karta */
+.primary-content {
+  width: 62%;
+}
+
+/* margin dedia main mai taaki upar whitepsace ajaye */
+.main {
+    margin-top: 3rem;
+}
+
+.sidebar {
+  width: 32%;
+  text-align: center;
+  background-color: #136c72;
+  color: #fff;
+  padding:2rem;
+}
